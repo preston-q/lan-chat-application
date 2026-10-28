@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LanChat — Room</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<header class="header">
+    <p class="wordmark">LanChat</p>
+</header>
+
+<main>
+    <section class="join-panel">
+        <h1>Meeting room</h1>
+        <p class="message" th:text="'Code: ' + ${code}"></p>
+    </section>
+</main>
+</body>
+</html>

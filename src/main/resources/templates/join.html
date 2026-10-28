@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LanChat — Join a Meeting</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<header class="header">
+    <p class="wordmark">LanChat</p>
+</header>
+
+<main>
+    <section class="join-panel" aria-labelledby="join-heading">
+        <h1 id="join-heading">Join a Meeting</h1>
+
+        <form th:action="@{/join}" method="post">
+            <label class="sr-only" for="meeting-code">Meeting code</label>
+            <input
+                    id="meeting-code"
+                    name="key"
+                    type="text"
+                    placeholder="Enter meeting code"
+                    autocomplete="off"
+                    autocapitalize="none"
+                    spellcheck="false"
+                    required
+            />
+            <button type="submit">Join Meeting</button>
+        </form>
+
+        <p class="message" th:if="${message}" th:text="${message}"></p>
+    </section>
+</main>
+</body>
+</html>
